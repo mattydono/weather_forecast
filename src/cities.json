@@ -1,0 +1,641 @@
+[
+  {
+    "id": 2643743,
+    "name": "London",
+    "country": "GB",
+    "coord": {
+      "lon": -0.12574,
+      "lat": 51.50853
+    }
+  },
+  {
+    "id": 5128638,
+    "name": "New York",
+    "country": "US",
+    "coord": {
+      "lon": -75.499901,
+      "lat": 43.000351
+    }
+  },
+  {
+    "id": 1819729,
+    "name": "Hong Kong",
+    "country": "HK",
+    "coord": {
+      "lon": 114.157692,
+      "lat": 22.285521
+    }
+  },
+  {
+    "id": 1880252,
+    "name": "Singapore",
+    "country": "SG",
+    "coord": {
+      "lon": 103.850067,
+      "lat": 1.28967
+    }
+  },
+  {
+    "id": 1609350,
+    "name": "Bangkok",
+    "country": "TH",
+    "coord": {
+      "lon": 100.51667,
+      "lat": 13.75
+    }
+  },
+  {
+    "id": 2968815,
+    "name": "Paris",
+    "country": "FR",
+    "coord": {
+      "lon": 2.3486,
+      "lat": 48.853401
+    }
+  },
+  {
+    "id": 1821274,
+    "name": "Macau",
+    "country": "MO",
+    "coord": {
+      "lon": 113.546112,
+      "lat": 22.20056
+    }
+  },
+  {
+    "id": 1795565,
+    "name": "Shenzhen",
+    "country": "CN",
+    "coord": {
+      "lon": 114.068298,
+      "lat": 22.54554
+    }
+  },
+  {
+    "id": 1850147,
+    "name": "Tokyo",
+    "country": "JP",
+    "coord": {
+      "lon": 139.691711,
+      "lat": 35.689499
+    }
+  },
+  {
+    "id": 1735161,
+    "name": "Kuala Lumpur",
+    "country": "MY",
+    "coord": {
+      "lon": 101.686531,
+      "lat": 3.1412
+    }
+  },
+  {
+    "id": 323777,
+    "name": "Antalya",
+    "country": "TR",
+    "coord": {
+      "lon": 30.69556,
+      "lat": 36.908119
+    }
+  },
+  {
+    "id": 745044,
+    "name": "Istanbul",
+    "country": "TR",
+    "coord": {
+      "lon": 28.949659,
+      "lat": 41.01384
+    }
+  },
+  {
+    "id": 292223,
+    "name": "Dubai",
+    "country": "AE",
+    "coord": {
+      "lon": 55.304722,
+      "lat": 25.258169
+    }
+  },
+  {
+    "id": 1835848,
+    "name": "Seoul",
+    "country": "KR",
+    "coord": {
+      "lon": 126.977829,
+      "lat": 37.56826
+    }
+  },
+  {
+    "id": 1151254,
+    "name": "Phuket",
+    "country": "TH",
+    "coord": {
+      "lon": 98.398102,
+      "lat": 7.89059
+    }
+  },
+  {
+    "id": 1809858,
+    "name": "Guangzhou",
+    "country": "CN",
+    "coord": {
+      "lon": 113.25,
+      "lat": 23.116671
+    }
+  },
+  {
+    "id": 104515,
+    "name": "Mecca",
+    "country": "SA",
+    "coord": {
+      "lon": 39.826111,
+      "lat": 21.42667
+    }
+  },
+  {
+    "id": 7280290,
+    "name": "Taipei",
+    "country": "TW",
+    "coord": {
+      "lon": 121.651611,
+      "lat": 25.025881
+    }
+  },
+  {
+    "id": 4164138,
+    "name": "Miami",
+    "country": "US",
+    "coord": {
+      "lon": -80.193657,
+      "lat": 25.774269
+    }
+  },
+  {
+    "id": 3067696,
+    "name": "Prague",
+    "country": "CZ",
+    "coord": {
+      "lon": 14.42076,
+      "lat": 50.088039
+    }
+  },
+  {
+    "id": 1796236,
+    "name": "Shanghai",
+    "country": "CN",
+    "coord": {
+      "lon": 121.458061,
+      "lat": 31.222219
+    }
+  },
+  {
+    "id": 5506956,
+    "name": "Las Vegas",
+    "country": "US",
+    "coord": {
+      "lon": -115.137222,
+      "lat": 36.174969
+    }
+  },
+  {
+    "id": 6542283,
+    "name": "Milan",
+    "country": "IT",
+    "coord": {
+      "lon": 9.19199,
+      "lat": 45.464161
+    }
+  },
+  {
+    "id": 6356055,
+    "name": "Barcelona",
+    "country": "ES",
+    "coord": {
+      "lon": 2.12804,
+      "lat": 41.399422
+    }
+  },
+  {
+    "id": 524901,
+    "name": "Moscow",
+    "country": "RU",
+    "coord": {
+      "lon": 37.615555,
+      "lat": 55.75222
+    }
+  },
+  {
+    "id": 2759794,
+    "name": "Amsterdam",
+    "country": "NL",
+    "coord": {
+      "lon": 4.88969,
+      "lat": 52.374031
+    }
+  },
+  {
+    "id": 2761369,
+    "name": "Vienna",
+    "country": "AT",
+    "coord": {
+      "lon": 16.37208,
+      "lat": 48.208488
+    }
+  },
+  {
+    "id": 5368361,
+    "name": "Los Angeles",
+    "country": "US",
+    "coord": {
+      "lon": -118.243683,
+      "lat": 34.052231
+    }
+  },
+  {
+    "id": 993800,
+    "name": "Johannesburg",
+    "country": "ZA",
+    "coord": {
+      "lon": 28.043631,
+      "lat": -26.202271
+    }
+  },
+  {
+    "id": 1816670,
+    "name": "Beijing",
+    "country": "CN",
+    "coord": {
+      "lon": 116.397232,
+      "lat": 39.907501
+    }
+  },
+  {
+    "id": 727011,
+    "name": "Sofia",
+    "country": "BG",
+    "coord": {
+      "lon": 23.32415,
+      "lat": 42.69751
+    }
+  },
+  {
+    "id": 4167147,
+    "name": "Orlando",
+    "country": "US",
+    "coord": {
+      "lon": -81.379242,
+      "lat": 28.53834
+    }
+  },
+  {
+    "id": 2950159,
+    "name": "Berlin",
+    "country": "DE",
+    "coord": {
+      "lon": 13.41053,
+      "lat": 52.524368
+    }
+  },
+  {
+    "id": 3054643,
+    "name": "Budapest",
+    "country": "HU",
+    "coord": {
+      "lon": 19.039909,
+      "lat": 47.498009
+    }
+  },
+  {
+    "id": 6359304,
+    "name": "Madrid",
+    "country": "ES",
+    "coord": {
+      "lon": -3.68275,
+      "lat": 40.489349
+    }
+  },
+  {
+    "id": 756135,
+    "name": "Warsaw",
+    "country": "PL",
+    "coord": {
+      "lon": 21.01178,
+      "lat": 52.229771
+    }
+  },
+  {
+    "id": 290030,
+    "name": "Doha",
+    "country": "QA",
+    "coord": {
+      "lon": 51.533333,
+      "lat": 25.286667
+    }
+  },
+  {
+    "id": 184745,
+    "name": "Nairobi",
+    "country": "KE",
+    "coord": {
+      "lon": 36.816669,
+      "lat": -1.28333
+    }
+  },
+  {
+    "id": 1273294,
+    "name": "Delhi",
+    "country": "IN",
+    "coord": {
+      "lon": 77.216667,
+      "lat": 28.666668
+    }
+  },
+  {
+    "id": 1275339,
+    "name": "Mumbai",
+    "country": "IN",
+    "coord": {
+      "lon": 72.847939,
+      "lat": 19.01441
+    }
+  },
+  {
+    "id": 1264527,
+    "name": "Chennai",
+    "country": "IN",
+    "coord": {
+      "lon": 80.278473,
+      "lat": 13.08784
+    }
+  },
+  {
+    "id": 3530597,
+    "name": "Mexico City",
+    "country": "MX",
+    "coord": {
+      "lon": -99.127663,
+      "lat": 19.428471
+    }
+  },
+  {
+    "id": 2964574,
+    "name": "Dublin",
+    "country": "IE",
+    "coord": {
+      "lon": -6.26719,
+      "lat": 53.34399
+    }
+  },
+  {
+    "id": 5391959,
+    "name": "San Francisco",
+    "country": "US",
+    "coord": {
+      "lon": -122.419418,
+      "lat": 37.774929
+    }
+  },
+  {
+    "id": 1808926,
+    "name": "Hangzhou",
+    "country": "CN",
+    "coord": {
+      "lon": 120.161423,
+      "lat": 30.29365
+    }
+  },
+  {
+    "id": 1645528,
+    "name": "Denpasar",
+    "country": "ID",
+    "coord": {
+      "lon": 115.216667,
+      "lat": -8.65
+    }
+  },
+  {
+    "id": 498817,
+    "name": "Saint Petersburg",
+    "country": "RU",
+    "coord": {
+      "lon": 30.264168,
+      "lat": 59.894444
+    }
+  },
+  {
+    "id": 2800866,
+    "name": "Brussels",
+    "country": "BE",
+    "coord": {
+      "lon": 4.34878,
+      "lat": 50.850449
+    }
+  },
+  {
+    "id": 732770,
+    "name": "Burgas",
+    "country": "BG",
+    "coord": {
+      "lon": 27.46781,
+      "lat": 42.506062
+    }
+  },
+  {
+    "id": 2147714,
+    "name": "Sydney",
+    "country": "AU",
+    "coord": {
+      "lon": 151.207321,
+      "lat": -33.867851
+    }
+  },
+  {
+    "id": 6167865,
+    "name": "Toronto",
+    "country": "CA",
+    "coord": {
+      "lon": -79.416298,
+      "lat": 43.700111
+    }
+  },
+  {
+    "id": 2267057,
+    "name": "Lisbon",
+    "country": "PT",
+    "coord": {
+      "lon": -9.13333,
+      "lat": 38.716671
+    }
+  },
+  {
+    "id": 3531673,
+    "name": "Cancun",
+    "country": "MX",
+    "coord": {
+      "lon": -86.846558,
+      "lat": 21.17429
+    }
+  },
+  {
+    "id": 3435910,
+    "name": "Buenos Aires",
+    "country": "AR",
+    "coord": {
+      "lon": -58.377232,
+      "lat": -34.613152
+    }
+  },
+  {
+    "id": 360630,
+    "name": "Cairo",
+    "country": "EG",
+    "coord": {
+      "lon": 31.24967,
+      "lat": 30.06263
+    }
+  },
+  {
+    "id": 3094802,
+    "name": "Krakow",
+    "country": "PL",
+    "coord": {
+      "lon": 19.91667,
+      "lat": 50.083328
+    }
+  },
+  {
+    "id": 683506,
+    "name": "Bucharest",
+    "country": "RO",
+    "coord": {
+      "lon": 26.10626,
+      "lat": 44.432251
+    }
+  },
+  {
+    "id": 1269517,
+    "name": "Jaipur",
+    "country": "IN",
+    "coord": {
+      "lon": 86.133331,
+      "lat": 23.433331
+    }
+  },
+  {
+    "id": 5856195,
+    "name": "Honolulu",
+    "country": "US",
+    "coord": {
+      "lon": -157.858337,
+      "lat": 21.30694
+    }
+  },
+  {
+    "id": 290340,
+    "name": "Manama",
+    "country": "BH",
+    "coord": {
+      "lon": 50.583199,
+      "lat": 26.215361
+    }
+  },
+  {
+    "id": 2990440,
+    "name": "Nice",
+    "country": "FR",
+    "coord": {
+      "lon": 7.26608,
+      "lat": 43.703129
+    }
+  },
+  {
+    "id": 2657896,
+    "name": "Zurich",
+    "country": "CH",
+    "coord": {
+      "lon": 8.55,
+      "lat": 47.366669
+    }
+  },
+  {
+    "id": 1642911,
+    "name": "Jakarta",
+    "country": "ID",
+    "coord": {
+      "lon": 106.845131,
+      "lat": -6.21462
+    }
+  },
+  {
+    "id": 1701668,
+    "name": "Manila",
+    "country": "PH",
+    "coord": {
+      "lon": 120.982201,
+      "lat": 14.6042
+    }
+  },
+  {
+    "id": 1153671,
+    "name": "Chiang Mai",
+    "country": "TH",
+    "coord": {
+      "lon": 98.98468,
+      "lat": 18.79038
+    }
+  },
+  {
+    "id": 6547285,
+    "name": "Marrakech",
+    "country": "MA",
+    "coord": {
+      "lon": -8.01041,
+      "lat": 31.63623
+    }
+  },
+  {
+    "id": 292968,
+    "name": "Abu Dhabi",
+    "country": "AE",
+    "coord": {
+      "lon": 54.366669,
+      "lat": 24.466669
+    }
+  },
+  {
+    "id": 6173331,
+    "name": "Vancouver",
+    "country": "CA",
+    "coord": {
+      "lon": -123.119339,
+      "lat": 49.24966
+    }
+  },
+  {
+    "id": 7839805,
+    "name": "Melbourne",
+    "country": "AU",
+    "coord": {
+      "lon": 144.944214,
+      "lat": -37.813061
+    }
+  },
+  {
+    "id": 3451190,
+    "name": "Rio de Janeiro",
+    "country": "BR",
+    "coord": {
+      "lon": -43.2075,
+      "lat": -22.902781
+    }
+  },
+  {
+    "id": 250441,
+    "name": "Amman",
+    "country": "JO",
+    "coord": {
+      "lon": 35.94503,
+      "lat": 31.955219
+    }
+  }
+]
