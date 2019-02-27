@@ -10,12 +10,34 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <input placeholder="city,country code" onChange={this.onCityChange}/>
-                <button onClick={this.onCitySubscribe}>Subscribe</button>
+            <div>
+                <div className="App">
+                    <input placeholder="city,country code" onChange={this.onCityChange}/>
+                    <button onClick={this.onCitySubscribe}>Subscribe</button>
+                    <button onClick={this.onPrint}>Print</button>
+                </div>
+                    {Object.entries(this.state.subscribedCities).map(([city, data]) => this.renderCityData(city, data))}
             </div>
         );
     }
+
+    onPrint = () => {
+        console.log(this.state.subscribedCities);
+    };
+
+    renderCityData = (city, data) => {
+        return data.list.map( datum => {
+            return (
+                <div>{city}
+                    <div key={city + 'Date'}>Date: {datum.dt_txt}</div>
+                    <div key={city + 'temp'}>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
+                    <div key={city + 'humidity'}>Humidity: {datum.main.humidity}%</div>
+                    <div key={city + 'description'}>{datum.weather[0].description.toLocaleUpperCase()}</div>
+                    <div key={city + 'wind'}>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
+                </div>
+            )}
+        )
+    };
 
     onCityChange = event => {
         this.setState({selectedCity: event.currentTarget.value})
@@ -31,14 +53,16 @@ class App extends Component {
 
     onCitySubscribe = () => {
         const citySubscribe = this.validateCity(cities);
-        fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + citySubscribe + '&APPID=9447e31ed925167b44b4b37981042924')
-            .then( response => response.json())
-            .then(data => this.setState(state => ({
-                subscribedCities: {
-                    ...state.subscribedCities,
-                    [data.city.name]: data
-                }
-            })), console.log(this.state.subscribedCities))
+        if(citySubscribe !== null) {
+            fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + citySubscribe + '&APPID=9447e31ed925167b44b4b37981042924')
+                .then(response => response.json())
+                .then(data => this.setState(state => ({
+                    subscribedCities: {
+                        ...state.subscribedCities,
+                        [data.city.name]: data
+                     },
+                })))
+        }
     };
 }
 
