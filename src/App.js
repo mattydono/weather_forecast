@@ -12,11 +12,11 @@ class App extends Component {
         return (
             <div>
                 <div className="App">
-                    <input placeholder="city,country code" onChange={this.onCityChange}/>
+                    <input placeholder="city,country code" onChange={this.onCityChange} value={this.state.selectedCity}/>
                     <button onClick={this.onCitySubscribe}>Subscribe</button>
                     <button onClick={this.onPrint}>Print</button>
                 </div>
-                    {Object.entries(this.state.subscribedCities).map(([city, data]) => this.renderCityData(city, data))}
+                    {Object.values(this.state.subscribedCities).map(this.renderCityData)}
             </div>
         );
     }
@@ -25,16 +25,20 @@ class App extends Component {
         console.log(this.state.subscribedCities);
     };
 
-    renderCityData = (data) => data.list.map( datum => (
-                <div key={city}>{city}
+    renderCityData = data => {
+        const cityName = data.city.name
+        return data.list.map(datum => (
+                <div key={cityName}>
+                    <div>{cityName}</div>
                     <div>Date: {datum.dt_txt}</div>
                     <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
                     <div>Humidity: {datum.main.humidity}%</div>
                     <div>{datum.weather[0].description.toLocaleUpperCase()}</div>
-                    <divy>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</divy>
+                    <div>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
                 </div>
             )
-        );
+        )
+    };
 
     onCityChange = event => {
         this.setState({selectedCity: event.currentTarget.value})
