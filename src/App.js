@@ -8,18 +8,18 @@ class App extends Component {
     subscribedCities: {},
   };
 
-  render() {
-    const { subscribedCities } = this.state;
-    return (
-      <div>
-        <Input onSubscribe={this.onSubscribe} />
-        <DataHandling
-          subscribedCities={subscribedCities}
-          unsubscribe={this.onUnsubscribe}
-        />
-      </div>
-    );
-  }
+    render() {
+        const {subscribedCities} = this.state;
+        return (
+            <div>
+                <Input onSubscribe={this.onSubscribe}/>
+                <DataHandling
+                    subscribedCities={subscribedCities}
+                    unsubscribe={this.onUnsubscribe}
+                />
+            </div>
+        )
+    }
 
   onSubscribe = selectedCity => {
     subscribe(selectedCity).then(data =>

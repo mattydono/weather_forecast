@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "emotion": "^10.0.7",
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
