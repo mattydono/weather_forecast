@@ -25,19 +25,16 @@ class App extends Component {
         console.log(this.state.subscribedCities);
     };
 
-    renderCityData = (city, data) => {
-        return data.list.map( datum => {
-            return (
+    renderCityData = (data) => data.list.map( datum => (
                 <div>{city}
-                    <div key={city + 'Date'}>Date: {datum.dt_txt}</div>
-                    <div key={city + 'temp'}>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
-                    <div key={city + 'humidity'}>Humidity: {datum.main.humidity}%</div>
-                    <div key={city + 'description'}>{datum.weather[0].description.toLocaleUpperCase()}</div>
-                    <div key={city + 'wind'}>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
+                    <div key={datum.city.name + 'Date'}>Date: {datum.dt_txt}</div>
+                    <div key={datum.city.name + 'temp'}>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
+                    <div key={datum.city.name + 'humidity'}>Humidity: {datum.main.humidity}%</div>
+                    <div key={datum.city.name + 'description'}>{datum.weather[0].description.toLocaleUpperCase()}</div>
+                    <div key={datum.city.name + 'wind'}>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
                 </div>
-            )}
-        )
-    };
+            )
+        );
 
     onCityChange = event => {
         this.setState({selectedCity: event.currentTarget.value})
