@@ -26,12 +26,12 @@ class App extends Component {
     };
 
     renderCityData = (data) => data.list.map( datum => (
-                <div>{city}
-                    <div key={datum.city.name + 'Date'}>Date: {datum.dt_txt}</div>
-                    <div key={datum.city.name + 'temp'}>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
-                    <div key={datum.city.name + 'humidity'}>Humidity: {datum.main.humidity}%</div>
-                    <div key={datum.city.name + 'description'}>{datum.weather[0].description.toLocaleUpperCase()}</div>
-                    <div key={datum.city.name + 'wind'}>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
+                <div key={city}>{city}
+                    <div>Date: {datum.dt_txt}</div>
+                    <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
+                    <div>Humidity: {datum.main.humidity}%</div>
+                    <div>{datum.weather[0].description.toLocaleUpperCase()}</div>
+                    <divy>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</divy>
                 </div>
             )
         );
