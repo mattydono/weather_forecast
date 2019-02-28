@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import cities from './cities.json'
+import {DataHandling} from "./DataHandling";
 
 class App extends Component {
     state = {
@@ -16,28 +17,15 @@ class App extends Component {
                     <button onClick={this.onCitySubscribe}>Subscribe</button>
                     <button onClick={this.onPrint}>Print</button>
                 </div>
-                    {Object.values(this.state.subscribedCities).map(this.renderCityData)}
+                    <DataHandling
+                        subscribedCities={this.state.subscribedCities}
+                    />
             </div>
         );
     }
 
     onPrint = () => {
         console.log(this.state.subscribedCities);
-    };
-
-    renderCityData = data => {
-        const cityName = data.city.name
-        return data.list.map(datum => (
-                <div key={cityName}>
-                    <div>{cityName}</div>
-                    <div>Date: {datum.dt_txt}</div>
-                    <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
-                    <div>Humidity: {datum.main.humidity}%</div>
-                    <div>{datum.weather[0].description.toLocaleUpperCase()}</div>
-                    <div>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
-                </div>
-            )
-        )
     };
 
     onCityChange = event => {
@@ -68,8 +56,3 @@ class App extends Component {
 }
 
 export default App;
-
-// ,\n\s+"coord": \{\n.+\n.+\n.+\}
-// ^\s+"id":.+,\n
-
-// const ws = new WebSocket('wss://api.coinfloor.co.uk/');  ws.onmessage = message => {   console.log(message); }
