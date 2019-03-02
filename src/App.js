@@ -1,7 +1,18 @@
-import React, { Component } from 'react';
-import { DataHandling } from './DataHandling';
-import { Input } from './Input';
-import { subscribe } from './SubscriptionService';
+import React, {Component} from 'react';
+import {DataHandling} from "./DataHandling";
+import {subscribe} from "./SubscriptionService";
+import {Input} from "./Input";
+import styled from '@emotion/styled';
+
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightskyblue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+`;
 
 class App extends Component {
   state = {
@@ -11,14 +22,11 @@ class App extends Component {
     render() {
         const {subscribedCities} = this.state;
         return (
-            <div>
-                <Input onSubscribe={this.onSubscribe}/>
-                <DataHandling
-                    subscribedCities={subscribedCities}
-                    unsubscribe={this.onUnsubscribe}
-                />
-            </div>
-        )
+                <AppContainer>
+                    <InputField onSubscribe={this.onSubscribe}/>
+                    <DataHandling subscribedCities={subscribedCities} unsubscribe={this.onUnsubscribe}/>
+                </AppContainer>
+        );
     }
 
   onSubscribe = selectedCity => {

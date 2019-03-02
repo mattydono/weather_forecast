@@ -4,13 +4,15 @@ import React, { Component } from 'react';
 const DataContainer = styled.div`
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    width: 100%;
+    align-items: center;
 `;
 
 const CityContainer = styled.div`
     display:flex;
     flex-direction: row;
-    min-width: 150px;
+    overflow: auto;
+    width: 75%;
 `;
 
 const CityNameDiv = styled.div`
