@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {DataHandling} from "./DataHandling";
 import {subscribe} from "./SubscriptionService";
 import {Input} from "./Input";
@@ -9,13 +9,16 @@ class App extends Component {
     };
 
     render() {
-        const { subscribedCities } = this.state;
+        const {subscribedCities} = this.state;
         return (
             <div>
                 <Input onSubscribe={this.onSubscribe}/>
-                <DataHandling subscribedCities={subscribedCities}/>
+                <DataHandling
+                    subscribedCities={subscribedCities}
+                    unsubscribe={this.onUnsubscribe}
+                />
             </div>
-        );
+        )
     }
 
     onSubscribe = (selectedCity) => {
@@ -27,6 +30,14 @@ class App extends Component {
                 },
             })));
     };
+
+    onUnsubscribe = cityName => {
+        this.setState(state => {
+            const subscribedCities = { ...state.subscribedCities };
+            delete subscribedCities[cityName];
+            return { subscribedCities };
+        });
+    }
 }
 
 export default App;

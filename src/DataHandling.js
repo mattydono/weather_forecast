@@ -12,15 +12,21 @@ export class DataHandling extends Component {
 
     renderCityData = data => {
         const cityName = data.city.name;
-        return data.list.map(datum => (
+        return (
             <div key={cityName}>
-                <div>{cityName}</div>
-                <div>Date: {datum.dt_txt}</div>
-                <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
-                <div>Humidity: {datum.main.humidity}%</div>
-                <div>{datum.weather[0].description.toLocaleUpperCase()}</div>
-                <div>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
+                <button onClick={() => this.props.unsubscribe(cityName)}>❌</button>
+                    {data.list.map(datum => (
+                    <div>
+                        <div>{cityName}</div>
+                        <div>Date: {datum.dt_txt}</div>
+                        <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
+                        <div>Humidity: {datum.main.humidity}%</div>
+                        <div>{datum.weather[0].description.toLocaleUpperCase()}</div>
+                        <div>Wind Speed: {(datum.wind.speed * 2.236936).toFixed(1)}mph</div>
+                    </div>
+                    )
+                  )}
             </div>
-        ))
+        )
     };
 }
