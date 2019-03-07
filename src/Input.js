@@ -1,31 +1,33 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export class Input extends Component {
-    state = {
-        selectedCity: ''
-    };
+  state = {
+    selectedCity: '',
+  };
 
-    render() {
-        return (
-            <div>
-                <input placeholder="city,country code" onChange={this.onCityChange} value={this.state.selectedCity}/>
-                <button onClick={this.onSubscribe}>Subscribe</button>
-                <button onClick={this.onRefresh}>Refresh</button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <input
+          placeholder='city,country code'
+          onChange={this.onCityChange}
+          value={this.state.selectedCity}
+        />
+        <button onClick={this.onSubscribe}>Subscribe</button>
+        <button onClick={this.onRefresh}>Refresh</button>
+      </div>
+    );
+  }
 
-    onRefresh = () => {
-        Object.keys(this.props.subscribedCities).map(this.props.onSubscribe)
-    };
+  onRefresh = () => {
+    Object.keys(this.props.subscribedCities).map(this.props.onSubscribe);
+  };
 
-    onSubscribe = () => {
-        this.props.onSubscribe(this.state.selectedCity)
-    };
+  onSubscribe = () => {
+    this.props.onSubscribe(this.state.selectedCity);
+  };
 
-    onCityChange = event => {
-        this.setState({selectedCity: event.currentTarget.value})
-    };
-
-
+  onCityChange = event => {
+    this.setState({ selectedCity: event.currentTarget.value });
+  };
 }
