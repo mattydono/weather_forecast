@@ -1,42 +1,61 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from '@emotion/styled';
 
 const InputContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    margin-top: 300px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20%;
+  justify-content: center;
+  width: 60%;
+  min-width: 400px;
+  óposition: relative;
 `;
 
 const InputField = styled.input`
-    display: flex;
-    text-align: center;
-    width: 80%;
-    border: solid lightslategrey 1px;
-    border-radius: 10px;
-    &:focus {outline: none}
+  display: flex;
+  outline: none;
+  border: solid lightgrey 1px;
+  border-radius: 25px;
+  text-align: center;
+  width: 80%;
+  font-size: 1.25rem;
+  box-shadow: 0 3px 10px darkslategrey;
+  font-family: 'Times New Roman';
 `;
 
 const Button = styled.button`
-    min-width:20%;
-    &:hover {cursor: pointer}
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  position: relative;
+  left: ${props => (props.right ? '-50px' : '50px')};
+  top: 2px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export class Input extends Component {
-    state = {
-        selectedCity: ''
-    };
+  state = {
+    selectedCity: undefined,
+  };
 
-    render() {
-        return (
-            <InputContainer>
-                <InputField placeholder="city,country code" onChange={this.onCityChange} value={this.state.selectedCity}/>
-                <Button onClick={this.onSubscribe}>Subscribe</Button>
-                <Button onClick={this.onRefresh}>Refresh</button>
-            </InputContainer>
-        )
-    }
+  render() {
+    return (
+      <InputContainer>
+        <Button onClick={this.onRefresh}>🔄</Button>
+        <InputField
+          placeholder='Search...'
+          onChange={this.onCityChange}
+          value={this.state.selectedCity}
+        />
+        <Button right onClick={this.onSubscribe}>
+          🔍
+        </Button>
+      </InputContainer>
+    );
+  }
 
   onRefresh = () => {
     Object.keys(this.props.subscribedCities).map(this.props.onSubscribe);
