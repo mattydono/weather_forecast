@@ -14,7 +14,7 @@ export class DataHandling extends Component {
       <div key={cityName}>
         <button onClick={() => this.props.unsubscribe(cityName)}>❌</button>
         {data.list.map(datum => (
-          <div>
+          <div key={datum.dt}>
             <div>{cityName}</div>
             <div>Date: {datum.dt_txt}</div>
             <div>Temp: {(datum.main.temp - 273.15).toFixed(1)}ºC</div>
