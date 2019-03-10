@@ -1,5 +1,7 @@
 import cities from './cities';
 
+const API_ID = '9447e31ed925167b44b4b37981042924';
+
 const isValidCity = cityName => cities.some(c => c.name === cityName);
 
 const mapCityToQuery = cityName => {
@@ -12,13 +14,12 @@ const mapCityToQuery = cityName => {
 
 export const subscribe = cityName => {
   const isValid = isValidCity(cityName);
-  if (isValid) {
-    const cityQuery = mapCityToQuery(cityName);
-    return fetch(
-      'https://api.openweathermap.org/data/2.5/forecast?q=' +
-        cityQuery +
-        '&APPID=9447e31ed925167b44b4b37981042924',
-    ).then(response => response.json());
+  if (!isValid) {
+    return Promise.reject(`${cityName} does not exist`);
   }
-  return Promise.reject(`${cityName} does not exist`);
+
+  const cityQuery = mapCityToQuery(cityName);
+  return fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?q=${cityQuery}&APPID=${API_ID}`,
+  ).then(response => response.json());
 };

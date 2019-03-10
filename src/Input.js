@@ -1,33 +1,26 @@
-import React, { Component } from 'react';
+import React, { useCallback, useState } from 'react';
 
-export class Input extends Component {
-  state = {
-    selectedCity: '',
-  };
+export const Input = ({ subscribedCities, onSubscribe }) => {
+  const [value, setValue] = useState('');
 
-  render() {
-    return (
-      <div>
-        <input
-          placeholder='city,country code'
-          onChange={this.onCityChange}
-          value={this.state.selectedCity}
-        />
-        <button onClick={this.onSubscribe}>Subscribe</button>
-        <button onClick={this.onRefresh}>Refresh</button>
-      </div>
-    );
-  }
+  const onRefresh = useCallback(() => {
+    Object.keys(subscribedCities).map(onSubscribe);
+  }, [subscribedCities, onSubscribe]);
 
-  onRefresh = () => {
-    Object.keys(this.props.subscribedCities).map(this.props.onSubscribe);
-  };
+  const onCityChange = useCallback(
+    event => setValue(event.currentTarget.value),
+    [setValue],
+  );
 
-  onSubscribe = () => {
-    this.props.onSubscribe(this.state.selectedCity);
-  };
-
-  onCityChange = event => {
-    this.setState({ selectedCity: event.currentTarget.value });
-  };
-}
+  return (
+    <div>
+      <input
+        placeholder='city,country code'
+        onChange={onCityChange}
+        value={value}
+      />
+      <button onClick={() => onSubscribe(value)}>Subscribe</button>
+      <button onClick={onRefresh}>Refresh</button>
+    </div>
+  );
+};
