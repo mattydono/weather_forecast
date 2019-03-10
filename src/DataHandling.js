@@ -12,7 +12,11 @@ export class DataHandling extends Component {
     const cityName = data.city.name;
     return (
       <div key={cityName}>
-        <button onClick={() => this.props.unsubscribe(cityName)}>❌</button>
+        <button onClick={() => this.props.unsubscribe(cityName)}>
+          <span role='img' aria-label='unsubscribe'>
+            ❌
+          </span>
+        </button>
         {data.list.map(datum => (
           <div>
             <div>{cityName}</div>
