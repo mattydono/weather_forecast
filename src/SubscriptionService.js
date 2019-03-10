@@ -1,6 +1,6 @@
 import cities from './cities';
 
-const isValidCity = cityName => cities.some(c => c.name === cityName);
+export const isValidCity = cityName => cities.some(c => c.name === cityName);
 
 const mapCityToQuery = cityName => {
   const city = cities.find(c => c.name === cityName);

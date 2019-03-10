@@ -5,18 +5,18 @@ import { subscribe } from './SubscriptionService';
 
 class App extends Component {
   state = {
-    subscribedCities: {},
+    data: {},
   };
 
   render() {
-    const { subscribedCities } = this.state;
+    const { data } = this.state;
     return (
       <div>
-        <Input onSubscribe={this.onSubscribe} />
-        <DataHandling
-          subscribedCities={subscribedCities}
-          unsubscribe={this.onUnsubscribe}
+        <Input
+          onSubscribe={this.onSubscribe}
+          subscribedCities={Object.keys(data)}
         />
+        <DataHandling data={data} unsubscribe={this.onUnsubscribe} />
       </div>
     );
   }
@@ -24,8 +24,8 @@ class App extends Component {
   onSubscribe = selectedCity => {
     subscribe(selectedCity).then(data =>
       this.setState(state => ({
-        subscribedCities: {
-          ...state.subscribedCities,
+        data: {
+          ...state.data,
           [data.city.name]: data,
         },
       })),
@@ -34,9 +34,9 @@ class App extends Component {
 
   onUnsubscribe = cityName => {
     this.setState(state => {
-      const subscribedCities = { ...state.subscribedCities };
-      delete subscribedCities[cityName];
-      return { subscribedCities };
+      const data = { ...state.data };
+      delete data[cityName];
+      return { data };
     });
   };
 }

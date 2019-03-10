@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 
 export class DataHandling extends Component {
   render() {
-    const { subscribedCities } = this.props;
-    return (
-      <div>{Object.values(subscribedCities).map(this.renderCityData)}</div>
-    );
+    return <div>{Object.values(this.props.data).map(this.renderCityData)}</div>;
   }
 
   renderCityData = data => {
